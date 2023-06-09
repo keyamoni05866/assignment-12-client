@@ -1,0 +1,12 @@
+/* .background{
+    background-image: url('../../assets/loginbg.avif');
+    background-size: cover;
+} */
+.backgroundImg{
+    background: url('../../assets/bakgroundImg.avif');
+    background-size: contain;
+   background-repeat: no-repeat;
+   width: 100%;
+ 
+ 
+}
