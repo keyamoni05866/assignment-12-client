@@ -5,6 +5,7 @@ import { Link, Navigate, useLocation, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../Providers/AuthProvider';
 import { useForm } from 'react-hook-form';
 import Swal from 'sweetalert2';
+import { FaGoogle } from 'react-icons/fa';
 const Login = () => {
 
     const {signIn} = useContext(AuthContext);
@@ -41,7 +42,8 @@ const Login = () => {
     
     };
 
-  
+    // google sign
+
     return (
      <div className='bg-base-200 py-16 ps-20'>
            <div className='backgroundImg max-w-7xl mx-auto    '>
@@ -91,7 +93,15 @@ const Login = () => {
                  </div>
                  
                  
-                   <input type="submit" value="Login" className="py-3 w-full rounded-lg px-10 mt-2  text-white text-xl hover:bg-[#0f4b5e] bg-[#168aad] "/>
+                
+                <input type="submit" value="Login" className="py-3 w-full  rounded-lg px-10 mt-2  text-white text-xl hover:bg-[#0f4b5e] bg-[#168aad] "/>
+              
+                    
+          
+                <button className="flex items-center gap-2  shadow-sm justify-center text-xl  w-full py-3 rounded-lg px-10  mt-2  text-black  border ">
+                        <FaGoogle></FaGoogle> Google Login
+                      
+                       </button>
             
               </form>
                </div>

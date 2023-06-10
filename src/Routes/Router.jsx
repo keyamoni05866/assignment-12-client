@@ -6,6 +6,7 @@ import Register from "../pages/Register/Register";
 import PrivateRoutes from "./PrivateRoutes";
 import Dashboard from "../layout/Dashboard";
 import Classes from "../pages/Classes/Classes";
+import ManageUser from "../pages/Dashboard/ManageUser/ManageUser";
 ;
 
 const router = createBrowserRouter([
@@ -34,7 +35,15 @@ const router = createBrowserRouter([
 
     {
       path: 'dashboard',
-      element: <Dashboard></Dashboard>
+      element: <Dashboard></Dashboard>,
+      children: [
+
+        // Admin Routes
+        {
+          path: 'manageUser',
+          element: <ManageUser></ManageUser>
+        }
+      ]
     }
   ]);
 
