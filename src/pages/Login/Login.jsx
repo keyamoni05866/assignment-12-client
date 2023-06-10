@@ -8,7 +8,7 @@ import Swal from 'sweetalert2';
 import { FaGoogle } from 'react-icons/fa';
 const Login = () => {
 
-    const {signIn} = useContext(AuthContext);
+    const {signIn, googleSign} = useContext(AuthContext);
     const navigate = useNavigate();
     const location = useLocation();
     const from  = location.state?.from?.pathname || "/";
@@ -43,7 +43,32 @@ const Login = () => {
     };
 
     // google sign
+    const handleGoogle = () =>{
+      googleSign()
+      .then(result => {
+       const loggedInUser =result.user;
+       console.log(loggedInUser);
+       const savedUser = {
+         name: loggedInUser.displayName,
+         email: loggedInUser.email,
+         photo: loggedInUser.photoURL,
+       };
+       fetch("http://localhost:5000/users", {
+         method: "POST",
+         headers: {
+           "content-type": "application/json",
+         },
+         body: JSON.stringify(savedUser),
+       })
+         .then((res) => res.json())
+         .then(() => {
+          navigate('/')
+         });
 
+      })
+    
+      .catch(error =>console.error(error))
+}
     return (
      <div className='bg-base-200 py-16 ps-20'>
            <div className='backgroundImg max-w-7xl mx-auto    '>
@@ -68,12 +93,13 @@ const Login = () => {
                    </label>
                    <input
                      type="text"
+                     required
                      placeholder="email"
-                     {...register("email", { required: true })}
+                     {...register("email")}
                      
                      className="input input-bordered"
                    />
-                    {errors.email && <span className="text-red-500">This field is required</span>}
+                  
                  </div>
                  <div className="form-control">
                    <label className="label">
@@ -82,11 +108,12 @@ const Login = () => {
          
                    <input
                      type="password"
+                     required
                      placeholder="password"
-                     {...register("password", { required: true })}
+                     {...register("password")}
                      className="input input-bordered"
                    />
-                   {errors.password && <span className="text-red-500">This field is required</span>}
+                 
                    <label className="label">
                   <p className="text-sm">Don't have an account <Link to="/register" className=" text-[#168aad] font-semibold ps-1">Sign Up</Link></p>
                    </label>
@@ -98,7 +125,7 @@ const Login = () => {
               
                     
           
-                <button className="flex items-center gap-2  shadow-sm justify-center text-xl  w-full py-3 rounded-lg px-10  mt-2  text-black  border ">
+                <button onClick={handleGoogle} className="flex items-center gap-2  shadow-sm justify-center text-xl  w-full py-3 rounded-lg px-10  mt-2  text-black  border ">
                         <FaGoogle></FaGoogle> Google Login
                       
                        </button>

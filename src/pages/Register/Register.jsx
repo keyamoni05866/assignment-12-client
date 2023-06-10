@@ -70,8 +70,37 @@ const Register = () => {
          .then(result => {
           const loggedInUser =result.user;
           console.log(loggedInUser);
+          const savedUser = {
+            name: loggedInUser.displayName,
+            email: loggedInUser.email,
+            photo: loggedInUser.photoURL,
+          };
+          fetch("http://localhost:5000/users", {
+            method: "POST",
+            headers: {
+              "content-type": "application/json",
+            },
+            body: JSON.stringify(savedUser),
+          })
+            .then((res) => res.json())
+            .then((data) => {
+              if (data.insertedId) {
+                reset();
+                Swal.fire({
+                  title: "User Created Successfully",
+                  showClass: {
+                    popup: "animate__animated animate__fadeInDown",
+                  },
+                  hideClass: {
+                    popup: "animate__animated animate__fadeOutUp",
+                  },
+                });
+                navigate("/");
+              }
+            });
+
          })
-         navigate('/')
+     
          .catch(error =>console.error(error))
  }
   return (

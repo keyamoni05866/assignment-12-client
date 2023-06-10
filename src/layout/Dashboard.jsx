@@ -1,7 +1,11 @@
-import React from "react";
+import React, { useContext } from "react";
 import { NavLink, Outlet } from "react-router-dom";
-import { FaCanadianMapleLeaf, FaGripVertical, FaGuitar, FaHome, FaMusic, FaSoundcloud, FaUser, FaUsers } from "react-icons/fa";
+import { FaCanadianMapleLeaf, FaGripVertical, FaGuitar, FaHome, FaMusic, FaUser, FaUsers } from "react-icons/fa";
+import { AuthContext } from "../Providers/AuthProvider";
 const Dashboard = () => {
+const {user} = useContext(AuthContext)
+  const isAdmin = user?.role == 'admin';
+  const isInstructor = true;
   return (
     <div>
       <div className="drawer lg:drawer-open">
@@ -23,29 +27,43 @@ const Dashboard = () => {
           <ul className="menu p-4 w-80 h-full bg-[#b3dbe7] text-base-content text-xl  ">
           <h2 className="text-3xl text-center font-semibold mb-8 text-[#168aad] italic">TuneCamp</h2>
             {/* Sidebar content here */}
+            
              
-            {/* student route */}
-            <li >
-           <NavLink to="/dashboard/selectedClass"><FaMusic></FaMusic>  My Selected Classes</NavLink>
-            </li>
-            <li>
-             <NavLink to="/dashboard/enrolledClass"><FaGripVertical></FaGripVertical> My Enrolled Classes</NavLink>
-            </li>
-            {/* admin route */}
-            <li>
+          {
+            isAdmin ? <>
+               {/* admin route */}
+               <li>
            <NavLink to="/dashboard/manageClass"><FaMusic></FaMusic> Manage Classes</NavLink>
             </li>
             <li>
              <NavLink to="/dashboard/manageUser"><FaUsers></FaUsers> Manage Users</NavLink>
             </li>
-
-            {/* instructor */}
-            <li>
+            </> :
+            isInstructor ? <>
+              {/* instructor */}
+              <li>
            <NavLink to="/dashboard/addClass"><FaCanadianMapleLeaf></FaCanadianMapleLeaf> Add A Classes</NavLink>
             </li>
             <li>
              <NavLink to="/dashboard/myClass"><FaMusic></FaMusic> My Classes</NavLink>
             </li>
+            </> :
+            <>
+              {/* student route */}
+            <li >
+           <NavLink to="/dashboard/selectedClass"><FaMusic></FaMusic>  My Selected Classes</NavLink>
+            </li>
+            <li>
+             <NavLink to="/dashboard/enrolledClass"><FaGripVertical></FaGripVertical> My Enrolled Classes</NavLink>
+            </li>  
+            </>
+          }
+
+
+           
+         
+
+          
 
 
            
