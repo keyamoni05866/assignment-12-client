@@ -18,7 +18,7 @@ const Instructors = () => {
             <h2 className='text-4xl  pt-8 underline text-center text-[#168aad] font-semibold uppercase italic '>Here is Our Instructors</h2>
              
 
-            <div className='px-96 py-20 '>
+            <div className='  px-72 py-20 '>
 
             <div className="overflow-x-auto shadow-xl bg-base-100">
   <table className="table ">

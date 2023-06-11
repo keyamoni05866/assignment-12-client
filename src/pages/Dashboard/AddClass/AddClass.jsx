@@ -43,6 +43,7 @@ const AddClass = () => {
                   }
                 })
               }
+              form.reset();
          })
         
     }
@@ -128,8 +129,9 @@ const AddClass = () => {
                 <span className="label-text font-semibold text-lg">Price</span>
               </label>
               <input
+              
                name="price"
-                type="number"
+                type="text"
                 placeholder="Price"
                 className="input input-bordered w-full "
               />
