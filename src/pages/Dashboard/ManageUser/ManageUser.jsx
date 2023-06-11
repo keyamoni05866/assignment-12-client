@@ -75,7 +75,7 @@ const handleInstructor = user =>{
       {/* row 1 */}
 
       {
-        users.map((user, index) =>  <tr className='text-lg'>
+        users.map((user, index) =>  <tr key={user._id} className='text-lg'>
             <td>
               {index  + 1}
             </td>

@@ -38,7 +38,7 @@ const handleApproved = singleClass=>{
        Manage Classes
       </h2>
 
-      <div className='max-w-7xl mx-auto mt-8'>
+      <div className=' mx-7 mt-8'>
       <div className="overflow-x-auto">
   <table className="table">
     {/* head */}
@@ -60,7 +60,7 @@ const handleApproved = singleClass=>{
       {/* row 1 */}
 
       {
-        classes.map((singleClass, index) =>  <tr className='text-lg'>
+        classes.map((singleClass, index) =>  <tr key={singleClass._id} className='text-lg'>
             <td>
               {index  + 1}
             </td>
