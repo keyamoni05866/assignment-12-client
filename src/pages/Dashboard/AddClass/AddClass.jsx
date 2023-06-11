@@ -34,7 +34,7 @@ const AddClass = () => {
             // console.log(res)
             if(res.data.insertedId){
                 Swal.fire({
-                  title: 'Successfully Added Item',
+                  title: 'Successfully Added Classes',
                   showClass: {
                     popup: 'animate__animated animate__fadeInDown'
                   },

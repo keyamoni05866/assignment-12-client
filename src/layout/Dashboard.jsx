@@ -4,8 +4,9 @@ import { FaCanadianMapleLeaf, FaGripVertical, FaGuitar, FaHome, FaMusic, FaUser,
 import { AuthContext } from "../Providers/AuthProvider";
 const Dashboard = () => {
 const {user} = useContext(AuthContext)
-  const isAdmin = user?.role == 'admin';
-  const isInstructor = true;
+  // const isAdmin = user?.role == 'admin';
+  const isAdmin = true;
+  const isInstructor = false;
   return (
     <div>
       <div className="drawer lg:drawer-open">
@@ -27,11 +28,39 @@ const {user} = useContext(AuthContext)
           <ul className="menu p-4 w-80 h-full bg-[#b3dbe7] text-base-content text-xl  ">
           <h2 className="text-3xl text-center font-semibold mb-8 text-[#168aad] italic">TuneCamp</h2>
             {/* Sidebar content here */}
-            
+            {/* {
+              user?.role === 'admin' && <>
+                       
+               <li>
+           <NavLink to="/dashboard/manageClass"><FaMusic></FaMusic> Manage Classes</NavLink>
+            </li>
+            <li>
+             <NavLink to="/dashboard/manageUser"><FaUsers></FaUsers> Manage Users</NavLink>
+            </li>
+              </>
+            }
+
+            {
+              user?.role === 'instructor' && <>
+                      <li>
+           <NavLink to="/dashboard/addClass"><FaCanadianMapleLeaf></FaCanadianMapleLeaf> Add A Classes</NavLink>
+            </li>
+            <li>
+             <NavLink to="/dashboard/myClass"><FaMusic></FaMusic> My Classes</NavLink>
+            </li>
+              </>
+            }
+          
+              <li>
+           <NavLink to="/dashboard/manageClass"><FaMusic></FaMusic> My Selected Classes</NavLink>
+            </li>
+            <li>
+             <NavLink to="/dashboard/manageUser"><FaUsers></FaUsers> My Enrolled Classes</NavLink>
+            </li> */}
              
-          {
+        {
             isAdmin ? <>
-               {/* admin route */}
+          
                <li>
            <NavLink to="/dashboard/manageClass"><FaMusic></FaMusic> Manage Classes</NavLink>
             </li>
@@ -40,7 +69,7 @@ const {user} = useContext(AuthContext)
             </li>
             </> :
             isInstructor ? <>
-              {/* instructor */}
+         
               <li>
            <NavLink to="/dashboard/addClass"><FaCanadianMapleLeaf></FaCanadianMapleLeaf> Add A Classes</NavLink>
             </li>
@@ -49,15 +78,15 @@ const {user} = useContext(AuthContext)
             </li>
             </> :
             <>
-              {/* student route */}
-            <li >
-           <NavLink to="/dashboard/selectedClass"><FaMusic></FaMusic>  My Selected Classes</NavLink>
+                 
+                  <li>
+           <NavLink to="/dashboard/manageClass"><FaMusic></FaMusic> My Selected Classes</NavLink>
             </li>
             <li>
-             <NavLink to="/dashboard/enrolledClass"><FaGripVertical></FaGripVertical> My Enrolled Classes</NavLink>
-            </li>  
+             <NavLink to="/dashboard/manageUser"><FaUsers></FaUsers> My Enrolled Classes</NavLink>
+            </li>
             </>
-          }
+          } 
 
 
            
