@@ -1,13 +1,15 @@
 import { useQuery } from '@tanstack/react-query';
-import React from 'react';
-import { useState } from 'react';
+import React, { useContext } from 'react';
 import Swal from 'sweetalert2';
 
+
 const ManageUser = () => {
+ 
          const {data: users =[], refetch} = useQuery(['users'], async () =>{
             const res = await fetch('http://localhost:5000/users')
             return res.json();
          })
+     
 
 const handleAdmin = user =>{
           fetch(`http://localhost:5000/users/admin/${user._id}`, {
@@ -19,12 +21,13 @@ const handleAdmin = user =>{
             
             if(data.modifiedCount){
                 refetch();
+                // setDisable(data)
                 Swal.fire({
                     position: 'top-end',
                     icon: 'success',
                     title: `${user.name} is Admin!`,
                     showConfirmButton: false,
-                    timer: 1500
+                    timer: 1500 
                   })
             }
           
@@ -99,10 +102,13 @@ const handleInstructor = user =>{
             </td>
             
             <td>
-              <button  onClick={() => handleAdmin(user)}  className="btn btn-sm bg-[#168aad] hover:bg-[#0f4b5e] text-white text-sm">Make Admin</button>
+         
+            <button  onClick={() => handleAdmin(user)} disabled={user.role === 'admin'}  className="btn btn-sm bg-[#168aad] hover:bg-[#0f4b5e] text-white text-sm">Make Admin</button>
+          
+              
             </td>
             <td>
-              <button onClick={() => handleInstructor(user)}  className="btn btn-sm bg-[#168aad] hover:bg-[#0f4b5e] text-white text-sm ">Make Instructor</button>
+              <button onClick={() => handleInstructor(user)} disabled={user.role === 'instructor'}   className="btn btn-sm bg-[#168aad] hover:bg-[#0f4b5e] text-white text-sm ">Make Instructor</button>
             </td>
           </tr>)
       }
