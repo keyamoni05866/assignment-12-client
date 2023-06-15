@@ -38,11 +38,11 @@ const router = createBrowserRouter([
       },
       {
         path: "classes",
-        element: (
+        element:
           
             <Classes></Classes>
          
-        ),
+       ,
       },
       {
         path: "instructor",
