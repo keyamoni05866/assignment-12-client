@@ -5,10 +5,12 @@ import { Link, Navigate, useLocation, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../Providers/AuthProvider';
 import { useForm } from 'react-hook-form';
 import Swal from 'sweetalert2';
-import { FaGoogle } from 'react-icons/fa';
+import { FaEye, FaEyeSlash, FaGoogle } from 'react-icons/fa';
+import { useState } from 'react';
 const Login = () => {
 
     const {signIn, googleSign} = useContext(AuthContext);
+    const [showPassword, setShowPassword] = useState(false)
     const navigate = useNavigate();
     const location = useLocation();
     const from  = location.state?.from?.pathname || "/";
@@ -101,23 +103,29 @@ const Login = () => {
                    />
                   
                  </div>
-                 <div className="form-control">
+              
+               <div className="form-control relative">
                    <label className="label">
                      <span className="label-text">Password</span>
                    </label>
          
                    <input
-                     type="password"
+                     type={showPassword ? "text" : "password"}
                      required
                      placeholder="password"
                      {...register("password")}
-                     className="input input-bordered"
+                     className="input input-bordered "
                    />
+                   <button className='absolute right-6 text-xl top-10 bottom-0 flex items-center '>
+                    {showPassword ? <FaEyeSlash></FaEyeSlash> : <FaEye></FaEye>}
+                   </button>
                  
-                   <label className="label">
+                
+                 </div>
+           
+                 <label className="label">
                   <p className="text-sm">Don't have an account <Link to="/register" className=" text-[#168aad] font-semibold ps-1">Sign Up</Link></p>
                    </label>
-                 </div>
                  
                  
                 

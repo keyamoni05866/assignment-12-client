@@ -3,6 +3,7 @@ import Banner from "../Banner/Banner";
 import { animated, useSpring } from "@react-spring/web";
 import PopularInstructor from "../PopularInstructor/PopularInstructor";
 import PopularClasses from "../../PopularClasses/PopularClasses";
+import ExtraSection from "../ExtraSection/ExtraSection";
 const Home = () => {
   const springs = useSpring({
     from: { y: 100 },
@@ -20,6 +21,7 @@ const Home = () => {
     
       <PopularInstructor></PopularInstructor>
       <PopularClasses></PopularClasses>
+      <ExtraSection></ExtraSection>
     </div>
   );
 };

@@ -1,0 +1,8 @@
+.background-image{
+    background-image: linear-gradient(0deg, rgba(21, 21, 21, 0.7), rgba(21, 21, 21, 0.7)), url('../../../assets/loginbg.avif') ;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 5px;
+    background-attachment: fixed;
+    width: 100%;
+}

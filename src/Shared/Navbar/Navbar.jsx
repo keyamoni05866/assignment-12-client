@@ -33,7 +33,7 @@ const Navbar = () => {
       .catch((error) => console.error(error));
   };
   return (
-    <div className="navbar   lg:px-24 py-3 ">
+    <div className="navbar bg-[#edf8fc]   lg:px-24 py-3 ">
       <div className="navbar-start">
         <div className="dropdown">
           <label tabIndex={0} className="btn btn-ghost lg:hidden">

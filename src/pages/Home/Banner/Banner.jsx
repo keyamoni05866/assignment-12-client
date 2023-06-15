@@ -12,7 +12,7 @@ import banner4 from "../../../assets/5.jpg";
 import banner5 from "../../../assets/3.jpg";
 const Banner = () => {
   return (
-    <div className=" w-full mb-9 ">
+    <div className=" w-full mb-9 mt-1">
       <Swiper navigation={true} modules={[Navigation]} className="mySwiper  ">
         <SwiperSlide >
         
