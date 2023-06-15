@@ -13,7 +13,7 @@ const PaymentHistory = () => {
   return (
     <div>
       <h2 className="text-5xl text-center font-semibold pt-10 uppercase underline text-[#168aad] italic">
-        My Selected Classes
+       Payment History
       </h2>
       <div className="   px-36 py-20 ">
         <div className="overflow-x-auto shadow-xl bg-base-100">
