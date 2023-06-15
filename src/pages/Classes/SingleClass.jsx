@@ -11,7 +11,7 @@ const SingleClass = ({ singleClass }) => {
   const location = useLocation();
 
   const handleSelectClass = singleClass =>{
-                        
+                                        
                         if(user && user?.email){
                           const selectClass = {classId: _id, name, classImage, className, seats, price, email:user?.email }
                           fetch('http://localhost:5000/selectClasses',{

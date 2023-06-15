@@ -14,6 +14,7 @@ const {id} = useParams();
   const [selectedClasses, refetch] = useClass();
   console.log(selectedClasses)
      const specificClass = selectedClasses.find(singleClass => singleClass._id ==  id);
+    //  console.log(specificClass)
      const price = specificClass.price
     
 
@@ -26,7 +27,7 @@ const {id} = useParams();
 
       <Elements stripe={stripePromise}>
       
-        <CheckoutForm price={price} ></CheckoutForm>
+        <CheckoutForm price={price} specificClass={specificClass}></CheckoutForm>
       </Elements>
     </div>
   );

@@ -26,7 +26,8 @@ const AddClass = () => {
             price,
             name,
             email,
-            status: 'pending'
+            status: 'pending',
+            
          }
         //  console.log(classes)
          axios.post('http://localhost:5000/addClasses', classes)
