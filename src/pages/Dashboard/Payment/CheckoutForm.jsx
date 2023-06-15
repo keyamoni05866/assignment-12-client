@@ -77,7 +77,12 @@ console.log(price)
                 email: user?.email,
                 transactionId: paymentIntent.id,
                 price,
-                successfullyClass: specificClass
+                date: new Date(),
+                bookedClassId: specificClass.classId,
+                paymentClassId: specificClass._id, 
+                className: specificClass.className,
+                classImage: specificClass.classImage,
+                instructorName: specificClass.name,
 
               }
               axios.post('http://localhost:5000/payments', payment)

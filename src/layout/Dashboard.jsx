@@ -8,6 +8,7 @@ import {
   FaMusic,
   FaUser,
   FaUsers,
+  FaWallet
 } from "react-icons/fa";
 import useAdmin from "../Hooks/useAdmin";
 import { useQuery } from "@tanstack/react-query";
@@ -78,7 +79,12 @@ const Dashboard = () => {
                 </li>
                 <li>
                   <NavLink to="/dashboard/enrolledClass">
-                    <FaUsers></FaUsers> My Enrolled Classes
+                  <FaCanadianMapleLeaf></FaCanadianMapleLeaf> My Enrolled Classes
+                  </NavLink>
+                </li>
+                <li>
+                  <NavLink to="/dashboard/paymentHistory">
+                   <FaWallet></FaWallet> Payment History
                   </NavLink>
                 </li>
               </>
