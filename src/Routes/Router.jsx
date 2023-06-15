@@ -14,7 +14,12 @@ import SelectedClass from "../pages/Dashboard/SelectedClass/SelectedClass";
 import Payment from "../pages/Dashboard/Payment/Payment";
 import PaymentHistory from "../pages/Dashboard/PaymentHistory/PaymentHistory";
 import EnrolledClasses from "../pages/Dashboard/EnrolledClasses/EnrolledClasses";
+import Error from "../pages/Error/Error";
 const router = createBrowserRouter([
+  {
+     path: '*',
+     element: <Error></Error>
+  },
   {
     path: "/",
     element: <Main></Main>,

@@ -17,7 +17,7 @@ const PaymentHistory = () => {
       </h2>
       <div className="   px-36 py-20 ">
         <div className="overflow-x-auto shadow-xl bg-base-100">
-          <table className="table ">
+          <table className="table w-full ">
             {/* head */}
             <thead className=" bg-[#168aad]  text-white text-lg">
               <tr>

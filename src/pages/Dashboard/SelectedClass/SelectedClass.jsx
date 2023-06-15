@@ -45,51 +45,53 @@ const SelectedClass = () => {
   };
 
   return (
-    <div className="  ">
-      <h2 className="text-5xl text-center font-semibold pt-10 uppercase underline text-[#168aad] italic">
-        My Selected Classes
-      </h2>
+    <div>
+    <h2 className="text-5xl text-center font-semibold mt-10 uppercase underline text-[#168aad] italic">
+    Selected Classes
+    </h2>
 
-      <div className="overflow-x-auto mx-auto max-w-7xl mt-8">
+    <div className=" mx-36 shadow-xl mt-8">
+      <div className="overflow-x-auto">
         <table className="table">
           {/* head */}
           <thead className=" bg-[#168aad]  text-white text-lg">
             <tr>
-              <th></th>
+              <th>serial</th>
               <th>Class Image</th>
               <th>Class Name</th>
+              <th> Email</th>
               <th>Instructor Name</th>
               <th>Price</th>
-              <th>Available Seats</th>
-              <th>Actions</th>
-              <th>Actions</th>
+              <th>pay</th>
+              <th>delete</th>
+            
             </tr>
           </thead>
           <tbody>
             {/* row 1 */}
 
-            {selectedClasses.map((singleClass, index) =>(
-              
+            {selectedClasses.map((singleClass, index) => (
               <tr key={singleClass._id} className="text-lg">
                 <td>{index + 1}</td>
                 <td>
-                  <div className="mask mask-squircle w-12 h-12">
-                    <img src={singleClass.classImage} alt="user photo" />
-                  </div>
-              
-                </td>
-                <td>
-                  <div className="flex items-center space-x-3">
-                    <div className="avatar"></div>
-                    <div>
-                      <div className="font-bold"> {singleClass.className}</div>
+                  <div className="avatar">
+                    <div className="mask mask-squircle w-12 h-12">
+                      <img src={singleClass.classImage} alt="user photo" />
                     </div>
                   </div>
                 </td>
+                <td>
+                  <div className="flex items-center space-x-3">
+                    <div>
+                      <div className="font-bold">{singleClass.className}</div>
+                    </div>
+                  </div>
+                </td>
+                <td>{singleClass.email}</td>
                 <td>{singleClass.name}</td>
+              
+                
                 <td>{singleClass.price}</td>
-                <td>{singleClass.seats}</td>
-
                 <td>
                   <Link   to={`/dashboard/payment/${singleClass._id}`}  className="btn btn-sm bg-[#168aad] hover:bg-[#0f4b5e] text-white text-sm">
                     Pay
@@ -103,12 +105,21 @@ const SelectedClass = () => {
                     Delete
                   </button>
                 </td>
+              
+             
               </tr>
             ))}
           </tbody>
         </table>
       </div>
     </div>
+  </div>
+
+
+
+
+
+   
   );
 };
 
