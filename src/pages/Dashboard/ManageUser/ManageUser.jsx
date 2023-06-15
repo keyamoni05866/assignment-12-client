@@ -103,12 +103,12 @@ const handleInstructor = user =>{
             
             <td>
          
-            <button  onClick={() => handleAdmin(user)} disabled={user.role === 'admin'}  className="btn btn-sm bg-[#168aad] hover:bg-[#0f4b5e] text-white text-sm">Make Admin</button>
+            <button  onClick={() => handleAdmin(user)} disabled={user?.role === 'admin'}  className="btn btn-sm bg-[#168aad] hover:bg-[#0f4b5e] text-white text-sm">Make Admin</button>
           
               
             </td>
             <td>
-              <button onClick={() => handleInstructor(user)} disabled={user.role === 'instructor'}   className="btn btn-sm bg-[#168aad] hover:bg-[#0f4b5e] text-white text-sm ">Make Instructor</button>
+              <button onClick={() => handleInstructor(user)} disabled={user?.role === 'instructor'}   className="btn btn-sm bg-[#168aad] hover:bg-[#0f4b5e] text-white text-sm ">Make Instructor</button>
             </td>
           </tr>)
       }

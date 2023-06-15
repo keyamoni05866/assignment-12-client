@@ -15,7 +15,7 @@ const AddClass = () => {
          const className=form.className.value;
          const classImage = form.classImage.value;
          const seats = form.seats.value;
-         const price = form.price.value
+         const price = parseInt(form.price.value)
          const name = user?.displayName;
          const email = user?.email
 
@@ -131,7 +131,7 @@ const AddClass = () => {
               <input
               
                name="price"
-                type="text"
+                type="number"
                 placeholder="Price"
                 className="input input-bordered w-full "
               />

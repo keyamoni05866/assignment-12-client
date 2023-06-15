@@ -14,7 +14,7 @@ const useInstructor =() =>{
         enabled: !loading,
         queryFn: async() =>{
             const res = await axios.get(`http://localhost:5000/users/instructor/${user?.email}`);
-            console.log('is admin response', res.data)
+            
             return res.data.role === "instructor";
         }
       })

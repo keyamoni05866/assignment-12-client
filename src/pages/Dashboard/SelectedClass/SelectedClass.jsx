@@ -2,11 +2,12 @@ import React from "react";
 import useClass from "../../../Hooks/useClass";
 import Swal from "sweetalert2";
 import axios from "axios";
+import { Link } from "react-router-dom";
+import Payment from "../Payment/Payment";
 
 const SelectedClass = () => {
   const [selectedClasses, refetch] = useClass();
-  console.log(selectedClasses);
-//   http://localhost:5000/selectClasses?email=jesmin@g.com
+
   const handleDelete = singleClass => {
     
     Swal.fire({
@@ -67,7 +68,8 @@ const SelectedClass = () => {
           <tbody>
             {/* row 1 */}
 
-            {selectedClasses.map((singleClass, index) => (
+            {selectedClasses.map((singleClass, index) =>(
+              
               <tr key={singleClass._id} className="text-lg">
                 <td>{index + 1}</td>
                 <td>
@@ -89,9 +91,9 @@ const SelectedClass = () => {
                 <td>{singleClass.seats}</td>
 
                 <td>
-                  <button className="btn btn-sm bg-[#168aad] hover:bg-[#0f4b5e] text-white text-sm">
+                  <Link   to={`/dashboard/payment/${singleClass._id}`}  className="btn btn-sm bg-[#168aad] hover:bg-[#0f4b5e] text-white text-sm">
                     Pay
-                  </button>
+                  </Link>
                 </td>
                 <td>
                   <button

@@ -5,9 +5,10 @@ import { useQuery } from "@tanstack/react-query";
 import axios from "axios";
 
 const useClass = (email) => {
-  const { user } = useContext(AuthContext);
+  const { user, loading } = useContext(AuthContext);
   const {  refetch , data: selectClass = []} = useQuery(
     ["selectClass", user?.email],
+    
     async () => {
       const res = await axios.get(
         `http://localhost:5000/selectClasses?email=${user?.email}`
