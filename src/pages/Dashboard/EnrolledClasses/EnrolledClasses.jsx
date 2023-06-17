@@ -1,11 +1,14 @@
 import { useQuery } from '@tanstack/react-query';
 import React from 'react';
+import { useContext } from 'react';
+import { AuthContext } from '../../../Providers/AuthProvider';
 
 const EnrolledClasses = () => {
+  const {user} = useContext(AuthContext);
     const { data: enrollClass = [] } = useQuery(
-        ["enrollClass"],
+        ["enrollClass",  user?.email],
         async () => {
-          const res = await fetch("https://assignment-12-server-eight-brown.vercel.app/payments");
+          const res = await fetch(`https://assignment-12-server-eight-brown.vercel.app/payments?email=${user?.email}`);
           return res.json();
         }
       );
