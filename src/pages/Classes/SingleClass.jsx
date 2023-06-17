@@ -14,7 +14,7 @@ const SingleClass = ({ singleClass }) => {
                                         
                         if(user && user?.email){
                           const selectClass = {classId: _id, name, classImage, className, seats, price, email:user?.email }
-                          fetch('http://localhost:5000/selectClasses',{
+                          fetch('https://assignment-12-server-eight-brown.vercel.app/selectClasses',{
                             method: 'POST',
                             headers:{
                               'content-type': 'application/json'

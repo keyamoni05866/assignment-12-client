@@ -33,7 +33,7 @@ const Register = () => {
               email: data.email,
               photo: data.photo,
             };
-            fetch("http://localhost:5000/users", {
+            fetch("https://assignment-12-server-eight-brown.vercel.app/users", {
               method: "POST",
               headers: {
                 "content-type": "application/json",
@@ -75,7 +75,7 @@ const Register = () => {
             email: loggedInUser.email,
             photo: loggedInUser.photoURL,
           };
-          fetch("http://localhost:5000/users", {
+          fetch("https://assignment-12-server-eight-brown.vercel.app/users", {
             method: "POST",
             headers: {
               "content-type": "application/json",

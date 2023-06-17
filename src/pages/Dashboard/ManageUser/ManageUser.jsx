@@ -6,13 +6,13 @@ import Swal from 'sweetalert2';
 const ManageUser = () => {
  
          const {data: users =[], refetch} = useQuery(['users'], async () =>{
-            const res = await fetch('http://localhost:5000/users')
+            const res = await fetch('https://assignment-12-server-eight-brown.vercel.app/users')
             return res.json();
          })
      
 
 const handleAdmin = user =>{
-          fetch(`http://localhost:5000/users/admin/${user._id}`, {
+          fetch(`https://assignment-12-server-eight-brown.vercel.app/users/admin/${user._id}`, {
             method: 'PATCH'
           })
           .then(res => res.json())
@@ -34,7 +34,7 @@ const handleAdmin = user =>{
           })
 }
 const handleInstructor = user =>{
-    fetch(`http://localhost:5000/users/instructor/${user._id}`, {
+    fetch(`https://assignment-12-server-eight-brown.vercel.app/users/instructor/${user._id}`, {
       method: 'PATCH'
     })
     .then(res => res.json())
@@ -55,7 +55,7 @@ const handleInstructor = user =>{
     })
 }
     return (
-        <div className='max-w-7xl mx-auto '>
+        <div className='max-w-7xl ms-8 mr-8 '>
         <h2  className='text-5xl text-center font-semibold mt-14 uppercase underline text-[#168aad] italic'>Manage User </h2>
         <h3 className='text-4xl font-semibold  mt-3 uppercase mb-8'>Total Users: {users.length}</h3>
            

@@ -5,7 +5,7 @@ const PaymentHistory = () => {
   const { data: paymentHistory = [], refetch } = useQuery(
     ["paymentHistory"],
     async () => {
-      const res = await fetch("http://localhost:5000/payments");
+      const res = await fetch("https://assignment-12-server-eight-brown.vercel.app/payments");
       return res.json();
     }
   );

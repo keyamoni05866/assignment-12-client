@@ -1,15 +1,16 @@
 import { useQuery } from "@tanstack/react-query";
 import React from "react";
+import { Link } from "react-router-dom";
 import Swal from "sweetalert2";
 
 const ManageClasses = () => {
   const { data: classes = [], refetch } = useQuery(["classes"], async () => {
-    const res = await fetch("http://localhost:5000/addClasses");
+    const res = await fetch("https://assignment-12-server-eight-brown.vercel.app/addClasses");
     return res.json();
   });
 
   const handleApproved = (singleClass) => {
-    fetch(`http://localhost:5000/addClasses/approved/${singleClass._id}`, {
+    fetch(`https://assignment-12-server-eight-brown.vercel.app/addClasses/approved/${singleClass._id}`, {
       method: "PATCH",
     })
       .then((res) => res.json())
@@ -29,7 +30,7 @@ const ManageClasses = () => {
       });
   };
   const handleDenied = (id) => {
-    fetch(`http://localhost:5000/addClasses/denied/${id}`, {
+    fetch(`https://assignment-12-server-eight-brown.vercel.app/addClasses/denied/${id}`, {
       method: "PATCH",
     })
       .then((res) => res.json())
@@ -50,14 +51,14 @@ const ManageClasses = () => {
   };
 
   return (
-    <div>
-      <h2 className="text-5xl text-center font-semibold mt-10 uppercase underline text-[#168aad] italic">
+    <div className="max-w-7xl  ">
+      <h2 className="text-5xl text-center font-semibold ms-36 mt-10 uppercase underline text-[#168aad] italic">
         Manage Classes
       </h2>
 
-      <div className=" mx-2 mt-8">
-        <div className="overflow-x-auto">
-          <table className="table">
+      <div className=" ms-2 mr-1  mt-8">
+        <div className="overflow-x-auto ">
+          <table className="table ">
             {/* head */}
             <thead className=" bg-[#168aad]  text-white text-lg">
               <tr>
@@ -69,6 +70,8 @@ const ManageClasses = () => {
                 <th>Available Seats</th>
                 <th>Price</th>
                 <th>Status</th>
+                <th>Status</th>
+             
               </tr>
             </thead>
             <tbody>
@@ -100,21 +103,27 @@ const ManageClasses = () => {
                     <button
                       onClick={() => handleApproved(singleClass)}
                       disabled={singleClass.status == "approved"}
-                      className="btn btn-sm mr-2 bg-[#168aad] hover:bg-[#0f4b5e] text-white text-sm"
+                      className="btn btn-sm  bg-[#168aad] hover:bg-[#0f4b5e]  text-white "
                     >
                   approved
                     </button>
-                    <button
+                    </td>
+                <td>
+                <button
                       onClick={() => handleDenied(singleClass._id)}
                       disabled={singleClass.status == "denied"}
-                      className="btn btn-sm mr-2 bg-[#168aad] hover:bg-[#0f4b5e] text-white text-sm "
+                      className="btn btn-sm  bg-[#168aad] hover:bg-[#0f4b5e] text-white text-sm "
                     >
                       denied
                     </button>
-                    <button className="btn btn-sm bg-[#168aad] hover:bg-[#0f4b5e] text-white text-sm ">
+                    <Link to={`/dashboard/feedback/${singleClass._id}`}>   <button className="btn btn-sm bg-[#168aad] hover:bg-[#0f4b5e] text-white text-sm mt-3">
                       FeedBack
-                    </button>
-                  </td>
+                    </button></Link>
+                </td>
+            
+       
+                 
+        
                 </tr>
               ))}
             </tbody>

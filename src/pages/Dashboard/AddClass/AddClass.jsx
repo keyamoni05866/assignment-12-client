@@ -30,7 +30,7 @@ const AddClass = () => {
             
          }
         //  console.log(classes)
-         axios.post('http://localhost:5000/addClasses', classes)
+         axios.post('https://assignment-12-server-eight-brown.vercel.app/addClasses', classes)
          .then(res =>{
             // console.log(res)
             if(res.data.insertedId){
@@ -54,7 +54,7 @@ const AddClass = () => {
         Add A Class{" "}
       </h2>
 
-      <div className="max-w-5xl mx-auto mt-20 shadow-lg bg-slate-200 h-[500px] rounded px-12 py-8 ">
+      <div className="max-w-7xl  mx-20 mb-8 mt-16 shadow-lg bg-slate-200 h-[500px] rounded px-12 py-8 ">
         <form onSubmit={handleAddClass}>
           
           <div className="grid grid-cols-2 gap-3 ">

@@ -4,7 +4,7 @@ import React from 'react';
 const Instructors = () => {
 
    const {data: instructors=[], refetch} = useQuery(['instructors'], async () =>{
-    const res = await fetch('http://localhost:5000/users/instructor')
+    const res = await fetch('https://assignment-12-server-eight-brown.vercel.app/users/instructor')
     return res.json()
    })
 
@@ -14,11 +14,11 @@ const Instructors = () => {
 
 
     return (
-        <div className=' bg-[#f0f5f7] h-screen'>
+        <div className=' bg-[#f0f5f7]  pb-16'>
             <h2 className='text-4xl  pt-8 underline text-center text-[#168aad] font-semibold uppercase italic '>Here is Our Instructors</h2>
              
 
-            <div className='  px-72 py-20 '>
+            <div className='  px-72 pt-5'>
 
             <div className="overflow-x-auto shadow-xl bg-base-100">
   <table className="table ">

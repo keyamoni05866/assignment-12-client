@@ -13,7 +13,7 @@ const useInstructor =() =>{
         queryKey:['isInstructor', user?.email],
         enabled: !loading,
         queryFn: async() =>{
-            const res = await axios.get(`http://localhost:5000/users/instructor/${user?.email}`);
+            const res = await axios.get(`https://assignment-12-server-eight-brown.vercel.app/users/instructor/${user?.email}`);
             
             return res.data.role === "instructor";
         }

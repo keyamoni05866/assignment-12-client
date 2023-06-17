@@ -52,7 +52,7 @@ const Login = () => {
           email: loggedInUser.email,
           photo: loggedInUser.photoURL,
         };
-        fetch("http://localhost:5000/users", {
+        fetch("https://assignment-12-server-eight-brown.vercel.app/users", {
           method: "POST",
           headers: {
             "content-type": "application/json",
@@ -84,9 +84,9 @@ const Login = () => {
             >
               Login Now
             </h1>
-            <div className="flex h-full py-16">
+            <div className="flex  py-16">
               <div className=" w-1/2   shadow-2xl">
-                <img src={img} alt="" className="h-96 " />
+                <img src={img} alt="" className="h-full " />
               </div>
               <div className="card rounded-none w-full mr-40   max-w-sm shadow-2xl bg-base-100">
                 <div className="card-body ">

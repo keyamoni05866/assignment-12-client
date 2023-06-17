@@ -24,7 +24,7 @@ const SelectedClass = () => {
        
                   
                 
-              fetch(`http://localhost:5000/selectClasses/${singleClass._id}`, {
+              fetch(`https://assignment-12-server-eight-brown.vercel.app/selectClasses/${singleClass._id}`, {
                 method: 'DELETE',
               })
               .then(res => res.json())

@@ -6,7 +6,7 @@ const Classes = () => {
 
 
           const {data: allClass=[], refetch} = useQuery(['allClass'], async() =>{
-            const res = await fetch('http://localhost:5000/addClasses/approved')
+            const res = await fetch('https://assignment-12-server-eight-brown.vercel.app/addClasses/approved')
             return res.json();
           })
 

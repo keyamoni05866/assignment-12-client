@@ -8,14 +8,14 @@ const PopularClasses = () => {
     const { data: popularClasses = [] } = useQuery(
         ["popularClasses"],
         async () => {
-          const res = await fetch("http://localhost:5000/payments/6Classes");
+          const res = await fetch("https://assignment-12-server-eight-brown.vercel.app/payments/6Classes");
           return res.json();
         }
       );
 
       const springs = useSpring({
-        from: { x: 100 },
-        to: { x: 0 },
+        from: {  x: 100 },
+        to: {  x: 0 },
       });
     return (
         <div>

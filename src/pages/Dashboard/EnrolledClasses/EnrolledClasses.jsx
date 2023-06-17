@@ -5,7 +5,7 @@ const EnrolledClasses = () => {
     const { data: enrollClass = [] } = useQuery(
         ["enrollClass"],
         async () => {
-          const res = await fetch("http://localhost:5000/payments");
+          const res = await fetch("https://assignment-12-server-eight-brown.vercel.app/payments");
           return res.json();
         }
       );

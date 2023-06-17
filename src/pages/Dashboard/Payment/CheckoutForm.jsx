@@ -18,7 +18,7 @@ console.log(price)
     const [transactionId, setTransactionId] = useState('')
 
    useEffect(()=>{
-        axios.post('http://localhost:5000/create-payment-intent', {price})
+        axios.post('https://assignment-12-server-eight-brown.vercel.app/create-payment-intent', {price})
         .then(res => {
           console.log(res.data.clientSecret)
           setClientSecret(res.data.clientSecret)
@@ -85,7 +85,7 @@ console.log(price)
                 instructorName: specificClass.name,
 
               }
-              axios.post('http://localhost:5000/payments', payment)
+              axios.post('https://assignment-12-server-eight-brown.vercel.app/payments', payment)
               .then(res => {
                 console.log(res.data);
                 if(res.data.insertedId){

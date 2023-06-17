@@ -8,7 +8,7 @@ const PopularInstructor = () => {
   const { data: popularInstructors = [], refetch } = useQuery(
     ["popularInstructs"],
     async () => {
-      const res = await fetch("http://localhost:5000/users/6instructor");
+      const res = await fetch("https://assignment-12-server-eight-brown.vercel.app/users/6instructor");
       return res.json();
     }
   );

@@ -12,7 +12,7 @@ const useClass = (email) => {
 
     queryFn: async () => {
       const res = await axios.get(
-        `http://localhost:5000/selectClasses?email=${user?.email}`
+        `https://assignment-12-server-eight-brown.vercel.app/selectClasses?email=${user?.email}`
       );
       return res.data;
     },

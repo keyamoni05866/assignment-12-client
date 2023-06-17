@@ -6,7 +6,7 @@ import PopularClasses from "../../PopularClasses/PopularClasses";
 import ExtraSection from "../ExtraSection/ExtraSection";
 const Home = () => {
   const springs = useSpring({
-    from: { y: 100 },
+    from: {  y: 100 },
     to: { y: 0 },
   });
   return (
