@@ -23,8 +23,12 @@
 * swiper
 
 
-# admin gmail: keya05866@gmail.com and password: Keyamoni@
-# instructor gmail: riya@g.com and password: Keyamoni@ 
-#  [All the users and admin, instructor password are same] user gmail is: jesmin@g.com
+# admin gmail: 
+keya05866@gmail.com and password: Keyamoni@
+# instructor gmail: 
+riya@g.com and password: Keyamoni@ 
+#  [All the users and admin, instructor password are same] student gmail is: jesmin@g.com
 
 # Live website Link: https://assignment-12-c7d9a.web.app/
+# server-repo:
+https://github.com/keyamoni05866/assignment-12-server
