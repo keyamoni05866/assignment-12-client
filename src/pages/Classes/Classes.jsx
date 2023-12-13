@@ -17,14 +17,16 @@ const Classes = () => {
           });
 
   return (
-    <div className="bg-[#f0f5f7]">
+    <div className=""  data-aos="fade-up"
+    data-aos-easing="linear"
+    data-aos-duration="3000">
        <animated.div
         style={{
           ...springs,
         }}
       >
         
-      <h2 className="text-5xl text-center font-semibold pt-8 uppercase underline text-[#168aad] italic">
+      <h2 className="animate-text mt-3 text-center bg-gradient-to-r from-teal-500 via-purple-500 to-orange-500 bg-clip-text text-transparent lg:text-5xl text-3xl font-black italic">
        All Classes
       </h2>
 

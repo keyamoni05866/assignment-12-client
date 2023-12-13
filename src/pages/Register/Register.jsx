@@ -106,7 +106,7 @@ const Register = () => {
   return (
     <div className="  mx-auto bg-base-200 pt-5 ">
       <h2 className="text-center text-4xl text-[#168aad] font-semibold uppercase">
-        Please Register
+        
       </h2>
       <div className="flex items-center justify-center  mx-auto ">
         <div className=" w-[500px]">
@@ -219,9 +219,9 @@ const Register = () => {
                 <input
                   type="submit"
                   value="Register"
-                  className="py-2 w-1/2 rounded-lg px-5 mt-2  text-white text-xl hover:bg-[#0f4b5e] bg-[#168aad] "
+                  className="py-2 w-1/2 rounded-lg px-2 mt-2  text-white text-xl hover:bg-[#0f4b5e] bg-[#168aad] "
                 />
-                  <button onClick={handleGoogle} className="flex items-center gap-2  shadow-lg justify-center text-xl  w-1/2 py-3 rounded-lg px-8  mt-2  text-black  border ">
+                  <button onClick={handleGoogle} className="flex items-center gap-2  shadow-lg justify-center text-xl w-1/2 py-3 rounded-lg px-2   mt-2  text-white  border bg-[#738b92]">
                         <FaGoogle></FaGoogle> Google SignUp
                       
                        </button>

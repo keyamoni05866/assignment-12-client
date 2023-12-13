@@ -10,7 +10,7 @@ const Home = () => {
     to: { y: 0 },
   });
   return (
-    <div className=" lg:px-24 mx-auto">
+    <div className=" lg:px-4  mx-auto">
       <animated.div
         style={{
           ...springs,

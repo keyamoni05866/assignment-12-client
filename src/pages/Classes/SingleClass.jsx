@@ -38,7 +38,6 @@ const SingleClass = ({ singleClass }) => {
                         else{
                           Swal.fire({
                             title: 'Please login first for selecting class',
-                           
                             icon: 'warning',
                             showCancelButton: true,
                             confirmButtonColor: '#3085d6',
@@ -53,7 +52,9 @@ const SingleClass = ({ singleClass }) => {
   }
  
   return (
-    <div>
+    <div  data-aos="fade-down"
+    data-aos-easing="linear"
+    data-aos-duration="2000">
       <div className="card card-compact w-96 bg-base-100 shadow-xl mb-8">
         <figure>
           <img src={classImage} alt="Shoes" className="h-[300px] w-full" />
@@ -68,7 +69,7 @@ const SingleClass = ({ singleClass }) => {
           </div>
 
           <div className="card-actions">
-            <button onClick={() => handleSelectClass(singleClass)} className="btn hover:bg-[#0f4b5e] bg-[#168aad] text-white text-xl w-full">
+            <button onClick={() => handleSelectClass(singleClass)} className="py-2 rounded-lg hover:bg-[#0f4b5e] bg-[#168aad] text-white text-xl w-full">
               Select
             </button>
           </div>

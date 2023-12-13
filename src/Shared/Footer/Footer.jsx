@@ -3,7 +3,7 @@ import { FaGuitar } from "react-icons/fa";
 
 const Footer = () => {
   return (
-    <div className="bg-[#edf8fc] ">
+    <div className=" ">
       <footer className="footer p-10 text-base-content lg:px-24">
         <div>
         <h2 className="normal-case lg:text-3xl  italic text-[#168aad] flex font-semibold"><FaGuitar></FaGuitar>TuneCamp </h2>
@@ -53,7 +53,7 @@ Enter Your Email Address
       </div>
   </div>
       </footer>
-      <footer className="footer footer-center bg-[#edf8fc] p-4 text-base-content">
+      <footer className="footer footer-center  p-4 text-base-content">
         <div>
           <p>Copyright © 2023 - All right reserved by TuneCamp  Ltd</p>
         </div>

@@ -3,7 +3,9 @@ import React from 'react';
 const SingleInstructor = ({instructor}) => {
     console.log(instructor)
     return (
-        <div>
+        <div  data-aos="fade-down"
+        data-aos-easing="linear"
+        data-aos-duration="1000" >
                 <div className="card card-compact w-96 bg-base-100 shadow-xl mb-8">
         <figure>
           <img src={instructor.photo} alt="Shoes" className="h-[300px] w-full" />

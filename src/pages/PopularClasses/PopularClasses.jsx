@@ -13,18 +13,13 @@ const PopularClasses = () => {
         }
       );
 
-      const springs = useSpring({
-        from: {  x: 100 },
-        to: {  x: 0 },
-      });
+      
     return (
-        <div>
-        <animated.div
-          style={{
-            ...springs,
-          }}
-        >
-          <h2 className="text-5xl text-center font-semibold pt-8 uppercase underline text-[#168aad] italic">
+        <div  data-aos="fade-down"
+        data-aos-easing="linear"
+        data-aos-duration="2000">
+       
+          <h2 className="animate-text text-center bg-gradient-to-r from-teal-500 via-purple-500 to-orange-500 bg-clip-text text-transparent lg:text-5xl text-3xl font-black italic">
             Popular Classes
           </h2>
           <div className="lg:grid grid-cols-3  lg:ms-24  mt-8  ">
@@ -36,11 +31,12 @@ const PopularClasses = () => {
   
           <div className=' flex justify-center mt-2 mb-8'>
         
-              <Link to="classes" className=" btn border-0 border-b-4  rounded-lg btn-outline text-[#168aad]  text-2xl ">
+              <Link to="classes" className=" btn border-0 border-b-4  rounded-lg btn-outline text-[#168aad]  text-lg ">
                See All Classes
               </Link>
               </div>
-        </animated.div>
+              
+
      
       </div>
     );

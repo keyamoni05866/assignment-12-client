@@ -47,7 +47,7 @@ const Navbar = () => {
       .catch((error) => console.error(error));
   };
   return (
-    <div className="navbar bg-[#edf8fc]   lg:px-24 py-3 ">
+    <div className="navbar   lg:px-24  ">
       <div className="navbar-start">
         <div className="dropdown">
           <label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -82,7 +82,7 @@ const Navbar = () => {
         </Link>
       </div>
       <div className="navbar-center hidden  lg:flex">
-        <ul className="menu menu-horizontal text-xl px-1">{navOptions}</ul>
+        <ul className="menu menu-horizontal text-lg px-1">{navOptions}</ul>
       </div>
       <div className="navbar-end">
         <label className="swap swap-rotate mr-9">
@@ -101,7 +101,7 @@ const Navbar = () => {
 
           {/* moon icon */}
           <svg
-            className="swap-off fill-current w-10 h-10"
+            className="swap-off fill-current w-8 h-8"
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 24 24"
           >
@@ -114,11 +114,11 @@ const Navbar = () => {
             <img
               src={user?.photoURL}
               alt=""
-              className="w-14 rounded-full lg:mr-4"
+              className="w-16 h-12 rounded-full lg:mr-4"
             />
             <button
               onClick={handleLogOut}
-              className="py-3 rounded-lg px-10  text-white text-sm lg:text-xl hover:bg-[#0f4b5e] bg-[#168aad]"
+              className="py-3 rounded-lg px-6  text-white text-sm lg:text-md hover:bg-[#0f4b5e] bg-[#168aad]"
             >
               Log Out
             </button>
@@ -127,7 +127,7 @@ const Navbar = () => {
           <>
             <Link
               to="/login"
-              className="py-3 rounded-lg px-10  text-white text-xl hover:bg-[#0f4b5e] bg-[#168aad]"
+              className="py-3 rounded-lg px-6  text-white text-sm lg:text-md hover:bg-[#0f4b5e] bg-[#168aad]"
             >
               Login
             </Link>
