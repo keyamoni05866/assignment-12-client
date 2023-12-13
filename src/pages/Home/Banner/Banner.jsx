@@ -23,6 +23,7 @@ const Banner = () => {
         
 
 <div className="relative  ">
+ 
       <img src={banner2} alt="" className="w-full h-[600px] bg-gradient-to-r  " />
         <div className="absolute   top-0 left-0 right-5 h-full  bg-gradient-to-r from-[#151515] to-[rgba(21, 21, 21, 0)] text-white">
      <div className="  lg:w-1/2 mt-32 ms-5 mr-5 lg:ms-80  ">
