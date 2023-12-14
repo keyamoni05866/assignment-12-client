@@ -1,7 +1,6 @@
 import { useQuery } from "@tanstack/react-query";
 import React from "react";
 import SingleInstructor from "./SingleInstructor";
-import { useSpring, animated } from "@react-spring/web";
 import { Link } from "react-router-dom";
 
 const PopularInstructor = () => {
@@ -17,12 +16,13 @@ const PopularInstructor = () => {
   return (
     <div data-aos="fade-up"
     data-aos-easing="linear"
-    data-aos-duration="2000">
+    data-aos-duration="2000" className="mt-10 lg:mx-20">
      
         <h2 className=" animate-text text-center bg-gradient-to-r from-teal-500 via-purple-500 to-orange-500 bg-clip-text text-transparent lg:text-5xl text-3xl font-black italic">
           Popular Instructors
         </h2>
-        <div className="lg:grid grid-cols-3  lg:ms-24 mt-8  ">
+        <p className="text-center text-lg mt-3  text-teal-700 italic font-semibold">---Most Popular Instructor. Who give best service of students.---</p>
+        <div className="grid lg:grid-cols-3  mt-8 gap-10 ">
           {popularInstructors.map((instructor) => (
             <SingleInstructor
               key={instructor._id}

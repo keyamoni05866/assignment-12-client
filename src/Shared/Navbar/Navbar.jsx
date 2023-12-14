@@ -84,8 +84,8 @@ const Navbar = () => {
       <div className="navbar-center hidden  lg:flex">
         <ul className="menu menu-horizontal text-lg px-1">{navOptions}</ul>
       </div>
-      <div className="navbar-end">
-        <label className="swap swap-rotate mr-9">
+      <div className="navbar-end ">
+        <label className="swap swap-rotate lg:mr-9">
           <input type="checkbox"  onChange={handleToggle}
            checked={mode === 'light' ? false : true}
           />
@@ -101,7 +101,7 @@ const Navbar = () => {
 
           {/* moon icon */}
           <svg
-            className="swap-off fill-current w-8 h-8"
+            className="swap-off fill-current lg:mt-0 mt-3 lg:w-8 lg:h-8 w-5 h-5"
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 24 24"
           >
@@ -114,11 +114,11 @@ const Navbar = () => {
             <img
               src={user?.photoURL}
               alt=""
-              className="w-16 h-12 rounded-full lg:mr-4"
+              className="lg:w-16 lg:h-12 w-8 h-8 rounded-full lg:mr-4 mt-3 lg:mt-0 "
             />
             <button
               onClick={handleLogOut}
-              className="py-3 rounded-lg px-6  text-white text-sm lg:text-md hover:bg-[#0f4b5e] bg-[#168aad]"
+              className="py-3 mt-3 lg:mt-0 rounded-lg px-6  text-white  text-xs lg:text-md hover:bg-[#0f4b5e] bg-[#168aad]"
             >
               Log Out
             </button>
@@ -127,7 +127,7 @@ const Navbar = () => {
           <>
             <Link
               to="/login"
-              className="py-3 rounded-lg px-6  text-white text-sm lg:text-md hover:bg-[#0f4b5e] bg-[#168aad]"
+              className="py-3 rounded-lg px-6 mt-3 lg:mt-0 text-white text-sm lg:text-md hover:bg-[#0f4b5e] bg-[#168aad]"
             >
               Login
             </Link>

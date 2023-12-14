@@ -1,4 +1,4 @@
-import { useSpring, animated } from "@react-spring/web";
+
 import { useQuery } from '@tanstack/react-query';
 import React from 'react';
 import SinglePopular from "./SinglePopular";
@@ -22,7 +22,8 @@ const PopularClasses = () => {
           <h2 className="animate-text text-center bg-gradient-to-r from-teal-500 via-purple-500 to-orange-500 bg-clip-text text-transparent lg:text-5xl text-3xl font-black italic">
             Popular Classes
           </h2>
-          <div className="lg:grid grid-cols-3  lg:ms-24  mt-8  ">
+          <p className="text-center text-lg mt-3  text-teal-700 italic font-semibold">---Most Enrolled Classes. Also People like this so much---</p>
+          <div className="grid lg:grid-cols-3  lg:ms-24  mt-8  ">
             {popularClasses.map((popular) => <SinglePopular 
              key={popular._id}
              popular={popular}
