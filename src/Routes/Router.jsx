@@ -17,6 +17,7 @@ import EnrolledClasses from "../pages/Dashboard/EnrolledClasses/EnrolledClasses"
 import Error from "../pages/Error/Error";
 import Feedback from "../pages/Dashboard/ManageClasses/Feedback";
 import MyClasses from "../pages/Dashboard/MyClasses/MyClasses";
+import Welcome from "../pages/Dashboard/Welcome/Welcome";
 const router = createBrowserRouter([
   {
      path: '*',
@@ -56,6 +57,7 @@ const router = createBrowserRouter([
   {
     path: "dashboard",
     element: <Dashboard></Dashboard>,
+ 
     children: [
       //  student dashboard
       {
@@ -63,6 +65,12 @@ const router = createBrowserRouter([
 
         element: <SelectedClass></SelectedClass>,
       },
+      {
+        path: "dashboard",
+
+        element: <Welcome></Welcome>,
+      },
+    
       {
         path: 'payment/:id',
         element: <Payment></Payment>

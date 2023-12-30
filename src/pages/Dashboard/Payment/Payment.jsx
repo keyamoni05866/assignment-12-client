@@ -21,7 +21,7 @@ const {id} = useParams();
 
   return (
     <div>
-      <h2 className="text-5xl text-center font-semibold pt-8 uppercase underline text-[#168aad] italic">
+      <h2 className="animate-text mt-3 text-center bg-gradient-to-r from-teal-500 via-purple-500 to-orange-500 bg-clip-text text-transparent lg:text-5xl text-3xl font-black italic mb-10 pt-8">
         Payment
       </h2>
 

@@ -10,7 +10,7 @@ const MyClasses = () => {
 
   return (
     <div className="max-w-7xl ms-7 mr-6 mx-auto">
-      <h2 className="text-5xl text-center font-semibold mt-10 uppercase underline text-[#168aad] italic">
+      <h2 className="animate-text mt-3 text-center bg-gradient-to-r from-teal-500 via-purple-500 to-orange-500 bg-clip-text text-transparent lg:text-5xl text-3xl font-black italic mb-10">
          My Classes
       </h2>
       <div className="   shadow-xl mt-8">

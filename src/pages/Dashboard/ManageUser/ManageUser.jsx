@@ -56,14 +56,14 @@ const handleInstructor = user =>{
 }
     return (
         <div className='max-w-7xl ms-8 mr-8 '>
-        <h2  className='text-5xl text-center font-semibold mt-14 uppercase underline text-[#168aad] italic'>Manage User </h2>
-        <h3 className='text-4xl font-semibold  mt-3 uppercase mb-8'>Total Users: {users.length}</h3>
+        <h2  className="animate-text mt-3 text-center bg-gradient-to-r from-teal-500 via-purple-500 to-orange-500 bg-clip-text text-transparent lg:text-5xl text-3xl font-black italic mb-10">Manage User </h2>
+       
            
 
         <div className="overflow-x-auto">
   <table className="table">
     {/* head */}
-    <thead className=' bg-[#168aad]  text-white text-lg'>
+    <thead className=' bg-[#168aad]  text-white text-base'>
       <tr>
         <th>
      

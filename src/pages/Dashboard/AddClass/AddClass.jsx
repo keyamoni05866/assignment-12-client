@@ -50,11 +50,11 @@ const AddClass = () => {
     }
   return (
     <div>
-      <h2 className="text-5xl text-center font-semibold mt-10 uppercase underline text-[#168aad] italic">
+      <h2 className="animate-text mt-3 text-center bg-gradient-to-r from-teal-500 via-purple-500 to-orange-500 bg-clip-text text-transparent lg:text-5xl text-3xl font-black italic mb-10">
         Add A Class{" "}
       </h2>
 
-      <div className="max-w-7xl  mx-20 mb-8 mt-16 shadow-lg bg-slate-200 h-[500px] rounded px-12 py-8 ">
+      <div className="max-w-7xl  mx-20 mb-8 mt-16 shadow-lg bg-base-200 h-[500px] rounded px-12 py-8 ">
         <form onSubmit={handleAddClass}>
           
           <div className="grid grid-cols-2 gap-3 ">
@@ -139,7 +139,7 @@ const AddClass = () => {
             </div>
           </div>
           </div>
-        <input type="submit" value="Add Class" className="py-3 w-full  rounded-lg px-10 mt-10 text-white text-xl hover:bg-[#0f4b5e] bg-[#168aad]" />
+        <input type="submit" value="Add " className="py-3 px-10  rounded-lg  mt-10 text-white text-xl hover:bg-[#0f4b5e] bg-[#4e899b]" />
         </form>
       </div>
     </div>

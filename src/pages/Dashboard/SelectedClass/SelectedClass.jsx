@@ -46,11 +46,11 @@ const SelectedClass = () => {
 
   return (
     <div>
-    <h2 className="text-5xl text-center font-semibold mt-10 uppercase underline text-[#168aad] italic">
+    <h2 className="animate-text mt-3 text-center bg-gradient-to-r from-teal-500 via-purple-500 to-orange-500 bg-clip-text text-transparent lg:text-5xl text-3xl font-black italic mb-10">
     Selected Classes
     </h2>
 
-    <div className=" mx-36 shadow-xl mt-8">
+    <div className=" mx-10 shadow-xl mt-8">
       <div className="overflow-x-auto">
         <table className="table">
           {/* head */}

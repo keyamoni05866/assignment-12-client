@@ -52,7 +52,7 @@ const ManageClasses = () => {
 
   return (
     <div className="max-w-7xl  ">
-      <h2 className="text-5xl text-center font-semibold ms-36 mt-10 uppercase underline text-[#168aad] italic">
+      <h2 className="animate-text mt-3 text-center bg-gradient-to-r from-teal-500 via-purple-500 to-orange-500 bg-clip-text text-transparent lg:text-5xl text-3xl font-black italic mb-10">
         Manage Classes
       </h2>
 
@@ -60,7 +60,7 @@ const ManageClasses = () => {
         <div className="overflow-x-auto ">
           <table className="table ">
             {/* head */}
-            <thead className=" bg-[#168aad]  text-white text-lg">
+            <thead className=" bg-[#168aad]  text-white  text-base">
               <tr>
                 <th>serial</th>
                 <th>Class Image</th>
@@ -97,7 +97,7 @@ const ManageClasses = () => {
                   <td>{singleClass.name}</td>
                   <td>{singleClass.email}</td>
                   <td>{singleClass.seats}</td>
-                  <td>{singleClass.price}</td>
+                  <td>{singleClass.price}$</td>
 
                   <td>
                     <button

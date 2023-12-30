@@ -15,10 +15,10 @@ const Navbar = () => {
 
  const handleToggle = e =>{
   if(e.target.checked){
-    setMode("dark")
+    setMode("light")
   }
   else{
-    setMode("light")
+    setMode("dark")
   }
  }
   const navOptions = (
@@ -35,7 +35,7 @@ const Navbar = () => {
 
       {user && (
         <li>
-          <Link to="/dashboard">Dashboard</Link>
+          <Link to="/dashboard/dashboard">Dashboard</Link>
         </li>
       )}
     </>
@@ -87,7 +87,7 @@ const Navbar = () => {
       <div className="navbar-end ">
         <label className="swap swap-rotate lg:mr-9">
           <input type="checkbox"  onChange={handleToggle}
-           checked={mode === 'light' ? false : true}
+           checked={mode === 'light' ? true : false}
           />
 
           {/* sun icon */}

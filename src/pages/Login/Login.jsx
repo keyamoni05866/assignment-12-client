@@ -116,11 +116,11 @@ const Login = () => {
                         {...register("password")}
                         className="input input-bordered "
                       />
-                      <button className="absolute right-6 text-xl top-10 bottom-0 flex items-center " onClick={handleShowPass}>
+       <button className="absolute right-6 text-xl top-10 bottom-0 flex items-center " onClick={handleShowPass}>
                         {showPassword ? (
-                          <FaEyeSlash></FaEyeSlash>
-                        ) : (
                           <FaEye></FaEye>
+                          ) : (
+                          <FaEyeSlash></FaEyeSlash>
                         )}
                       </button>
                     </div>
