@@ -67,7 +67,7 @@ const Dashboard = () => {
        <div className="flex justify-items-start">
        <label className="swap swap-rotate mb-8 me-5 ">
           <input type="checkbox"  onChange={handleToggle}
-           checked={mode === 'light' ? true : false}
+           checked={mode === 'dark' ? true : false}
           />
 
           {/* sun icon */}
